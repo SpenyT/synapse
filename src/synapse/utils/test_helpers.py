@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import random
 
-from mai.models.neural_network import NeuralNetwork
+from synapse.models.neural_network import NeuralNetwork
 
 # shows one example
 def show_example(net: NeuralNetwork, X: np.ndarray, y: np.ndarray, idx: int, img_size: tuple[int, int] =(28, 28), as_letter: bool =False):

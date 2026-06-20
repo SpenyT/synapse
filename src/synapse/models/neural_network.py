@@ -1,7 +1,7 @@
 import numpy as np
 from tqdm import tqdm
-from mai.layers import Layer
-from mai.models.utils.loss import resolve_loss
+from synapse.layers import Layer
+from synapse.models.utils.loss import resolve_loss
 
 
 class NeuralNetwork:

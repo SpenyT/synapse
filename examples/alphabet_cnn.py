@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.utils import shuffle
-from mai.utils import kaggle_download_csv
+from synapse.utils import kaggle_download_csv
 #from matplotlib import pyplot as plt
 
 # import kaggle dataset & randomize
@@ -21,8 +21,8 @@ X_train, Y_train = pixels[testing_size:training_size], labels[testing_size:train
 # plt.axis("off")
 # plt.show()
 
-from mai.models import NeuralNetwork
-from mai.layers import FCL
+from synapse.models import NeuralNetwork
+from synapse.layers import FCL
 
 model = [
     FCL(784, 142, activation='relu',  weight_initializer="he"),
@@ -35,7 +35,7 @@ test_acc = net.evaluate(X_dev, Y_dev)
 print(f"Test accuracy: {test_acc:.4f}")
 
 # visualize samples
-from mai.utils import show_random_predictions
+from synapse.utils import show_random_predictions
 show_random_predictions(net, X_dev, Y_dev, rows=3, cols=6, as_letter=True)
 
 # test with completely new data set

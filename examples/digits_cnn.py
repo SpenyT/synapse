@@ -7,8 +7,8 @@ X = digits.data.astype(np.float32) / 16.0
 Y = digits.target.astype(int)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42, stratify=Y)
 
-from mai.layers import FCL
-from mai.models import NeuralNetwork
+from synapse.layers import FCL
+from synapse.models import NeuralNetwork
 
 model = [
     FCL(64, 64, activation='relu'), 
